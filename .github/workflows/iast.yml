@@ -33,7 +33,7 @@ jobs:
           network_name: isolated
 
       - name: stop docker
-        run: docker stop docker-apache
+        run: docker stop docker-apache-container
         
   sast:
     name: Psalm
