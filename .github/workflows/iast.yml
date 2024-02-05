@@ -46,7 +46,7 @@ jobs:
       - name: Psalm Security Scan
         uses: docker://ghcr.io/psalm/psalm-security-scan
         with:
-          relative_dir: ./src
+          relative_dir: ./app
 
       - name: Import Security Analysis results into Github Security Code Scanning
         uses: github/codeql-action/upload-sarif@v3
