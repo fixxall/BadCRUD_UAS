@@ -62,14 +62,14 @@ class LogoutTestCase(unittest.TestCase):
         self.assertFalse(searched_contact_name)
 
     def test_start(self):
-        self.login_correct_credentials(self)
-        self.index_page(self)
-        self.create_contact_page(self)
-        self.create_contact_form(self)
-        self.search_contact_name(self)
-        self.delete_contact(self)
+        self.login_correct_credentials()
+        self.index_page()
+        self.create_contact_page()
+        self.create_contact_form()
+        self.search_contact_name()
+        self.delete_contact()
         time.sleep(1)
-        self.check_search_contact_name(self)
+        self.check_search_contact_name()
 
     @classmethod
     def tearDownClass(cls):
