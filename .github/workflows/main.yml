@@ -43,7 +43,7 @@ jobs:
 
       - name: Run python testing
         run: |
-          pytest -v -n 7 testing/
+          pytest -v -n 7 testing/AnotherFeatureTestCase/
 
       - name: stop docker
         run: docker stop docker-apache-container

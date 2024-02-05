@@ -4,6 +4,7 @@ function pdo_connect(){
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
     $DATABASE_PASS = '532532Se1cretPassword_IsImportant43243';
+    // $DATABASE_PASS = '';
     $DATABASE_NAME = 'badcrud';
     try {
     	return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME, $DATABASE_USER, $DATABASE_PASS);
