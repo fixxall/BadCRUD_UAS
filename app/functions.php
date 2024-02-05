@@ -1,9 +1,10 @@
 <?php
 
 function pdo_connect(){
-    $DATABASE_HOST = 'localhost';
+    $DATABASE_HOST = 'mysql';
     $DATABASE_USER = 'root';
     $DATABASE_PASS = '532532Se1cretPassword_IsImportant43243';
+    // $DATABASE_PASS = 'mysqlpassword';
     // $DATABASE_PASS = '';
     $DATABASE_NAME = 'badcrud';
     try {
