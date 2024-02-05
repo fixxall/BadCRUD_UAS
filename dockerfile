@@ -13,4 +13,4 @@ WORKDIR /var/www/html
 
 COPY ./app ./
 
-EXPOSE 8088
+EXPOSE 80

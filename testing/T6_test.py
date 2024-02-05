@@ -14,7 +14,7 @@ class LoginAccountLockoutTestCase(unittest.TestCase):
         round = 100
         
         def test_1_login_account_lockout(self):
-            login_url = 'http://localhost:8088/login.php'
+            login_url = 'http://localhost/login.php'
             self.browser.get(login_url)
             self.browser.find_element(By.ID, 'inputUsername').send_keys('user')
             self.browser.find_element(By.ID, 'inputPassword').send_keys('user123')

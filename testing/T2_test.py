@@ -11,7 +11,7 @@ class LoginInvalidUsernameTestCase(unittest.TestCase):
         cls.browser = webdriver.Firefox(options=option)
 
     def test_1_login_invalid_username(self):
-        login_url = 'http://localhost:8088/login.php'
+        login_url = 'http://localhost/login.php'
         self.browser.get(login_url)
         self.browser.find_element(By.ID, 'inputUsername').send_keys('user')
         self.browser.find_element(By.ID, 'inputPassword').send_keys('nimda666!')

@@ -4,7 +4,7 @@ services:
     image: my-php-site:latest
     container_name: docker-apache-container
     ports:
-      - "8088:8088"
+      - "80:80"
 
   mysql:
     image: mysql:latest
