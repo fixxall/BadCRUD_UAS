@@ -2,7 +2,7 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-class LoginFalseCredentialsTestCase(unittest.TestCase):
+class LoginInvalidUsernameTestCase(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
@@ -10,7 +10,7 @@ class LoginFalseCredentialsTestCase(unittest.TestCase):
         option.add_argument('--headless')
         cls.browser = webdriver.Firefox(options=option)
 
-    def test_1_login_false_credentials(self):
+    def test_1_login_invalid_username(self):
         login_url = 'http://localhost:8088/login.php'
         self.browser.get(login_url)
         self.browser.find_element(By.ID, 'inputUsername').send_keys('user')
