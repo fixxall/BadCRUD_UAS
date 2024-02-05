@@ -23,7 +23,7 @@ class LogoutTestCase(unittest.TestCase):
 
     def index_page(self):
         expected_result = "admin"
-        actual_result = self.browser.find_element(By.XPATH, "/html/body/div[1]/h2").text.split(', ')[1]
+        actual_result = self.browser.find_element(By.CSS_SELECTOR, "body > div.container > h2").text.split(', ')[1]
         self.assertIn(expected_result, actual_result)
 
     def create_contact_page(self):
