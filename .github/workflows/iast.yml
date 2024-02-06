@@ -34,7 +34,7 @@ jobs:
           # cmd_options: '-a'
           # http_login_http_username: 'admin'
           # http_login_http_password: 'nimda666!'
-          cmd_options: -j -U "admin" -n $GITHUB_WORKSPACE/final_zap.context
+          cmd_options: -j -U "admin" -n  /zap/wrk/final_zap.context
 
       - name: stop docker
         run: docker stop docker-apache-container
