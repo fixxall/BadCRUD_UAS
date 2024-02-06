@@ -31,6 +31,9 @@ jobs:
         with:
           target: ${{ env.URL }}
           network_name: isolated
+          cmd_options: '-a'
+          http_login_http_username: 'admin'
+          http_login_http_password: 'nimda666!'
 
       - name: stop docker
         run: docker stop docker-apache-container
