@@ -25,14 +25,6 @@ jobs:
         run: |
           URL=http://$(ip -f inet -o addr show docker0 | awk '{print $4}' | cut -d '/' -f 1)
           echo "URL=$URL" >> $GITHUB_ENV
-
-      - name: Context Setup
-        env:
-          # Set a previously defined secret as an environment variable for this step:
-          B64PASSWORD: ${{'nimda666!'}}
-        # Replace the "PLACEHOLDER" string in the context file with the real base64-encoded password:
-        run: |
-          sed -ie "s/PLACEHOLDER/${B64PASSWORD}/" $GITHUB_WORKSPACE/ctx_file.context
           
       - name: ZAP Scan
         uses: hermanka/action-full-scan@master
@@ -42,7 +34,7 @@ jobs:
           # cmd_options: '-a'
           # http_login_http_username: 'admin'
           # http_login_http_password: 'nimda666!'
-          cmd_options: -j -U "admin" -n /zap/wrk/ctx_file.context
+          cmd_options: -j -U "admin" -n $GITHUB_WORKSPACE/final_zap.context
 
       - name: stop docker
         run: docker stop docker-apache-container
